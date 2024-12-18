@@ -1,2 +1,3 @@
 runtime: python39
-service: flask
+service: default 
+#這邊的名字是可以自己取的，如果之前沒有部屬過app engine的話需要先部屬一個default
