@@ -2,7 +2,7 @@ import pickle
 
 from flask import Flask, request, jsonify
 
-app = Flask(__name)
+app = Flask(__name__)
 
 # Load the model
 model = pickle.load(open('model.pkl', 'rb'))
@@ -31,5 +31,5 @@ def predict():
     predict = model.predict(data['feature'])
     return jsonify(predict[0].tolist())
 
-if name == 'main__':
+if __name__ == '__main__':
     app.run(debug = True, host = '0.0.0.0', port=8080)
